@@ -1,0 +1,101 @@
+$LightGrayishCyanBackground: hsl(180, 52%, 96%);
+$LightGrayishCyan: hsl(180, 31%, 95%);
+$DarkGrayishCyan: hsl(180, 8%, 52%);
+$VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+$DesaturatedDarkCyan: hsl(180, 29%, 50%);
+
+
+div.filter {
+    width: 80%;
+    height: auto;
+    background-color: white;
+    position:  absolute;
+    bottom: -50px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
+    div.catHolder {
+        display: flex;
+       
+        label {
+            margin: 0 10px;
+            font-weight: 700;
+           color: $DesaturatedDarkCyan ;
+           background-color: $LightGrayishCyan;
+            height: 35px;
+            padding: 0 0 0 15px;
+            display: flex;
+            align-items: center;
+            button {
+                transition: 0.4s;
+                border: none;
+                height: 100%;
+                border-radius: 4px;
+                background-color: $DesaturatedDarkCyan ;
+                margin-left: 10px;
+                padding: 0 10px;
+                &:hover {
+                    background-color: black;
+                }
+            }
+        }
+    }
+    a {
+        font-weight: 700;
+        color: $DesaturatedDarkCyan;
+    }
+}
+
+@media(max-width: 1024px) {
+    div.filter {
+        width: 80%;
+        height: auto;
+        background-color: white;
+        position:  absolute;
+        bottom: -50%;
+        padding:  20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        
+        div.catHolder {
+            display: flex;
+            justify-content: start;
+            width: 75%;
+           flex-wrap: wrap;
+            label {
+                margin: 7px;
+                font-weight: 700;
+               color: $DesaturatedDarkCyan ;
+               background-color: $LightGrayishCyan;
+                height: 35px;
+                padding: 0 ;
+                display: flex;
+                align-items: center;
+                button {
+                    transition: 0.4s;
+                    border: none;
+                    height: 100%;
+                    border-radius: 4px;
+                    background-color: $DesaturatedDarkCyan ;
+                    margin-left: 10px;
+                    padding: 0 10px;
+              
+                    &:hover {
+                        background-color: black;
+                    }
+                }
+            }
+        }
+        a {
+           width: 25%;
+           text-align: center;
+            font-weight: 700;
+            color: $DesaturatedDarkCyan;
+        }
+    }
+}

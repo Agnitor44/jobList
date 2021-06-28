@@ -1,0 +1,400 @@
+ $LightGrayishCyanBackground: hsl(180, 52%, 96%);
+$LightGrayishCyan: hsl(180, 31%, 95%);
+$DarkGrayishCyan: hsl(180, 8%, 52%);
+$VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+$DesaturatedDarkCyan: hsl(180, 29%, 50%);
+
+
+body {
+    background-color: $LightGrayishCyan;
+    font-size: 15px;
+}
+
+div.list {
+    display: flex;
+    flex-direction: column;
+ 
+    align-items: center;
+    div.element {
+        width: 80%;
+        height: 150px;
+        background-color: rgb(255, 255, 255);
+        padding: 0 40px;
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        -webkit-box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.31); 
+        box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.31);
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+        div.featured {
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 7px;
+            background-color: $DesaturatedDarkCyan;
+            top: 0;
+        }
+        div.leftZone {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                height: 70%;
+            }
+            div.columnWrappper {
+                margin-left: 20px;
+                display: flex;
+          
+                justify-content: space-evenly;
+                flex-direction: column;
+                height: 90%;
+                div.companyAndStatus {
+                    display: flex;
+                    align-items: center;
+                    h4 {
+                        color:$DesaturatedDarkCyan;
+                        margin: 0 15px;
+                        margin-left: 0;
+                        display: flex;
+                        font-size: 14px;
+                        &:nth-child(2) {
+                            background-color: $DesaturatedDarkCyan;
+                        }
+                        &:nth-child(3) {
+                            background-color: $VeryDarkGrayishCyan;
+                        }
+                    }
+                    h4.status {
+                        padding: 5px 10px 2px 10px;
+                        
+                  
+                        letter-spacing: 0;
+                        text-transform: uppercase;
+                        color: white;
+                       font-weight: 400;
+                       text-align: center;
+                        border-radius: 999px;
+                    
+            
+                    }
+                }
+                h2 {
+                    margin: 0;
+                }
+
+                ul {
+                    display: flex;
+                    margin: 0;
+                    justify-content: start;
+                    padding: 0;
+                    li {
+                        margin: 0 15px ;
+                        color: $DarkGrayishCyan;
+                        &:nth-child(1) {
+                            list-style: none;
+                            margin-left: 0;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        div.rightZone {
+            div.rightWrapper {
+                height: 100%;
+                ul {
+                    display: flex;
+                    list-style: none;
+                    li {
+                        margin: 0 5px;
+                        border-radius: 2px;
+                        background-color: $LightGrayishCyan;
+                        padding: 10px;
+                        font-weight: 700;
+                        color: $DesaturatedDarkCyan;
+                        transition: 0.4s; 
+                        cursor: pointer;
+                        &:hover {
+                            background-color: $DesaturatedDarkCyan;
+                            color: white;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 1100px) {
+    div.list {
+        display: flex;
+        flex-direction: column;
+      
+        align-items: center;
+        div.element {
+            width: 80%;
+            height:200px;
+            background-color: rgb(255, 255, 255);
+            padding: 0 40px;
+            margin: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            -webkit-box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.31); 
+            box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.31);
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            flex-direction: column;
+            div.featured {
+                position: absolute;
+                left: 0;
+                height: 100%;
+                width: 5px;
+                background-color: $DesaturatedDarkCyan;
+                top: 0;
+            }
+            div.leftZone {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                img {
+                    height: 70%;
+                }
+                div.columnWrappper {
+                    margin-left: 20px;
+                    display: flex;
+              
+                    justify-content: space-evenly;
+                    flex-direction: column;
+                    height: 100%;
+                    div.companyAndStatus {
+                        display: flex;
+                        align-items: center;
+                        h4 {
+                            color:$DesaturatedDarkCyan;
+                            margin: 0 15px;
+                            margin-left: 0;
+                            display: flex;
+                            font-size: 14px;
+                            &:nth-child(2) {
+                                background-color: $DesaturatedDarkCyan;
+                            }
+                            &:nth-child(3) {
+                                background-color: $VeryDarkGrayishCyan;
+                            }
+                        }
+                        h4.status {
+                            padding: 5px 10px 2px 10px;
+                            
+                      
+                            letter-spacing: 0;
+                            text-transform: uppercase;
+                            color: white;
+                           font-weight: 400;
+                           text-align: center;
+                            border-radius: 999px;
+                        
+                
+                        }
+                    }
+                    h2 {
+                        margin: 0;
+                    }
+    
+                    ul {
+                        display: flex;
+                        margin: 0;
+                        justify-content: start;
+                        padding: 0;
+                        li {
+                            margin: 0 15px ;
+                            color: $DarkGrayishCyan;
+                            &:nth-child(1) {
+                                list-style: none;
+                                margin-left: 0;
+                            }
+                        }
+                    }
+    
+                }
+    
+            }
+    
+            div.rightZone {
+                div.rightWrapper {
+                    height: 100%;
+                    ul {
+                        display: flex;
+                            padding: 0;
+                     
+                        li {
+                            margin: 0 5px;
+                            border-radius: 2px;
+                            background-color: $LightGrayishCyan;
+                            padding: 10px;
+                            font-weight: 700;
+                            color: $DesaturatedDarkCyan;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+@media(max-width: 650px) {
+    div.list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        div.element {
+            width: 90%;
+            height: 300px;
+            background-color: rgb(255, 255, 255);
+            padding: 0;
+            margin: 35px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            -webkit-box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.31); 
+            box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.31);
+            position: relative;
+            overflow: visible;
+            border-radius: 4px;
+            flex-direction: column;
+            padding: 20px 0;
+            div.featured {
+                position: absolute;
+                left: 0;
+                height: 100%;
+                width: 5px;
+                background-color: $DesaturatedDarkCyan;
+                top: 0;
+            }
+            div.leftZone {
+                height: 60%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                position: relative;
+                img {
+                    position: absolute;
+                    height: 40%;
+                    top: -25%;
+                    left: 20px;
+                }
+                div.columnWrappper {
+                    padding-top: 40px;
+                    margin-left: 20px;
+                    display: flex;
+              
+                    justify-content: space-evenly;
+                    flex-direction: column;
+                    height: 80%;
+                   
+                    div.companyAndStatus {
+                        display: flex;
+                        align-items: center;
+                        h4 {
+                            color:$DesaturatedDarkCyan;
+                            margin: 0 15px;
+                            margin-left: 0;
+                            display: flex;
+                            font-size: 15px;
+                            &:nth-child(2) {
+                                background-color: $DesaturatedDarkCyan;
+                            }
+                            &:nth-child(3) {
+                                background-color: $VeryDarkGrayishCyan;
+                            }
+                        }
+                        h4.status {
+                            padding: 5px 10px 2px 10px;
+                            
+                      
+                            letter-spacing: 0;
+                            text-transform: uppercase;
+                            color: white;
+                           font-weight: 400;
+                           text-align: center;
+                            border-radius: 999px;
+                        
+                
+                        }
+                    }
+                    h2 {
+                        margin: 0;
+                        font-size: 18px;
+                    }
+    
+                    ul {
+                        display: flex;
+                        margin: 0;
+                        justify-content: start;
+                        padding: 0;
+                        li {
+                            margin: 0 10px ;
+                            color: $DarkGrayishCyan;
+                            &:nth-child(1) {
+                                list-style: none;
+                                margin-left: 0;
+                            }
+                        }
+                    }
+    
+                }
+    
+            }
+    
+            div.rightZone {
+                height: 40%;
+                div.rightWrapper {
+                    height: 100%;
+                    position: relative;
+                  
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 5%;
+                        width: 90%;
+                        height: 1px;
+                        background-color: $DarkGrayishCyan;
+                    }
+                    ul {
+                        display: flex;
+                            padding: 0;
+                            flex-wrap: wrap;
+                            margin-left: 10px;
+                            padding: 10px;
+                        li {
+                            margin: 5px 5px;
+                            border-radius: 2px;
+                            background-color: $LightGrayishCyan;
+                            padding: 10px 5px;
+                            font-weight: 700;
+                            color: $DesaturatedDarkCyan;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
